@@ -16,25 +16,25 @@ def world():
     return 'Весной природа прекрасна! Все расцветает, и появляются первые насекомые.'
 
 
-@app.route('/<str:number_one>/<str:number_two>/add')
+@app.route('/<number_one>/<number_two>/add')
 def add(number_one, number_two):
     number_one,number_two = float(number_one), float(number_two)
     return f'{number_one} + {number_two} = {number_one + number_two}'
 
 
-@app.route('/<str:number_one>/<str:number_two>/sub')
+@app.route('/<number_one>/<number_two>/sub')
 def sub(number_one, number_two):
     number_one,number_two = float(number_one), float(number_two)
     return f'{number_one} - {number_two} = {number_one - number_two}'
 
 
-@app.route('/<str:number_one>/<str:number_two>/multi')
+@app.route('/<number_one>/<number_two>/multi')
 def multi(number_one, number_two):
     number_one,number_two = float(number_one), float(number_two)
     return f'{number_one} * {number_two} = {number_one * number_two}'
 
 
-@app.route('/<str:number_one>/<str:number_two>/div')
+@app.route('/<number_one>/<number_two>/div')
 def div(number_one, number_two):
     number_one,number_two = float(number_one), float(number_two)
     if number_two == 0:
